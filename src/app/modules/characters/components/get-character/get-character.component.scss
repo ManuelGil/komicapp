@@ -1,0 +1,175 @@
+.hero {
+  height: 612px;
+  margin: auto;
+  max-width: calc(85%);
+  position: relative;
+
+  & .card {
+    border: none;
+    border-radius: 18px;
+  }
+
+  & .cover {
+    left: 0;
+    position: absolute;
+
+    & img {
+      border-radius: 18px;
+      height: 612px;
+      opacity: 1;
+    }
+  }
+
+  & .description {
+    height: 471px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    padding: 80px 80px 40px 80px;
+
+    & .shared {
+      background: transparent url('/assets/shared.png') 0% 0% no-repeat
+        padding-box;
+      border-radius: 1px;
+      height: 62px;
+      opacity: 1;
+      position: absolute;
+      right: 138px;
+      top: 20px;
+      width: 53px;
+    }
+
+    & .favorite {
+      background: transparent url('/assets/favorite.png') 0% 0% no-repeat
+        padding-box;
+      border-radius: 1px;
+      height: 62px;
+      opacity: 1;
+      position: absolute;
+      right: 62px;
+      top: 20px;
+      width: 53px;
+    }
+
+    & .card-title {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      color: var(--unnamed-color-393b44);
+      display: -webkit-box;
+      font: var(--unnamed-font-style-normal) normal bold 72px/80px
+        var(--unnamed-font-family-poppins);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      opacity: 1;
+      overflow: hidden;
+      text-align: left;
+    }
+
+    & .card-details {
+      color: var(--unnamed-color-0090ef);
+      font: var(--unnamed-font-style-normal) normal
+        var(--unnamed-font-weight-600) 11px / var(--unnamed-line-spacing-17)
+        var(--unnamed-font-family-poppins);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      opacity: 1;
+      text-align: left;
+    }
+
+    & .card-text {
+      color: var(--unnamed-color-393b44);
+      font: var(--unnamed-font-style-normal) normal normal 16px/21px
+        var(--unnamed-font-family-poppins);
+      letter-spacing: var(--unnamed-character-spacing-0);
+      opacity: 1;
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    max-width: 100%;
+    padding: 0;
+
+    & .cover {
+      position: relative;
+      width: 100%;
+    }
+
+    & .cover > img {
+      border-radius: 0;
+      height: auto;
+      width: 100%;
+    }
+
+    & .description {
+      background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+      border-radius: 14px;
+      box-shadow: 0px 3px 10px #00000029;
+      height: 258px;
+      margin: auto;
+      opacity: 1;
+      padding: 40px 20px 20px 20px;
+      position: relative;
+      top: -70px;
+
+      & .shared {
+        height: 28px;
+        background: transparent url('/assets/shared.png') 0% 0% no-repeat
+          padding-box;
+        background-size: 24px 28px;
+        left: 12px;
+        opacity: 1;
+        top: 10px;
+        width: 24px;
+      }
+
+      & .favorite {
+        height: 28px;
+        background: transparent url('/assets/favorite.png') 0% 0% no-repeat
+          padding-box;
+        background-size: 24px 28px;
+        left: 48px;
+        opacity: 1;
+        top: 10px;
+        width: 24px;
+      }
+
+      & .card-title {
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        color: var(--unnamed-color-393b44);
+        display: -webkit-box;
+        font: var(--unnamed-font-style-normal) normal bold 30px/32px
+          var(--unnamed-font-family-poppins);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        opacity: 1;
+        text-align: left;
+      }
+
+      & .card-details {
+        color: var(--unnamed-color-0090ef);
+        font: var(--unnamed-font-style-normal) normal
+          var(--unnamed-font-weight-600) 11px / var(--unnamed-line-spacing-17)
+          var(--unnamed-font-family-poppins);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        opacity: 1;
+        text-align: left;
+      }
+
+      & .card-text {
+        color: var(--unnamed-color-393b44);
+        font: var(--unnamed-font-style-normal) normal normal
+          var(--unnamed-font-size-13) / 19px var(--unnamed-font-family-poppins);
+        letter-spacing: var(--unnamed-character-spacing-0);
+        opacity: 1;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: calc(85%);
+  }
+}

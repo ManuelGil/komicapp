@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <div class="row col-12">
+    <div class="col-sm-6 col-lg-3 col-xxl-2 d-none d-sm-block my-4 total">
+      <ng-container *ngIf="(characters$ | async)?.total as total">
+        {{ total }} resultados
+      </ng-container>
+    </div>
+    <div
+      class="col-12 col-sm-6 col-lg-9 col-xxl-10 d-flex align-items-end flex-wrap my-4 sort"
+    >
+      <span class="d-flex flex-wrap"> A-Z </span>
+      <span class="d-flex flex-wrap p-2 order">
+        <a class="up" (click)="updateCharacters({ order: 'asc', page: 1 })">
+          <fa-icon [icon]="faChevronUp"></fa-icon>
+        </a>
+        <a class="down" (click)="updateCharacters({ order: 'desc', page: 1 })">
+          <fa-icon [icon]="faChevronDown"></fa-icon>
+        </a>
+      </span>
+    </div>
+  </div>
+  <div class="row col-12">
+    <ng-container *ngIf="(characters$ | async)?.results as characters">
+      <div
+        class="col-6 col-md-4 col-lg-3 col-xl-2 my-4"
+        *ngFor="let character of characters"
+      >
+        <a [routerLink]="['/characters/get', character.id]" class="card p-0">
+          <img
+            class="img-fluid h-100"
+            src="{{ character.thumbnail?.path }}.{{
+              character.thumbnail?.extension
+            }}"
+          />
+          <div class="favorite"></div>
+          <div class="card-body w-100 h-50">
+            <p class="card-text">
+              {{ character.name }}
+            </p>
+          </div>
+        </a>
+      </div>
+    </ng-container>
+  </div>
+  <div class="row col-12">
+    <div class="col-12 d-flex justify-content-center flex-wrap mx-2 my-4">
+      <ng-container *ngIf="(characters$ | async)?.total as total">
+        <div class="d-flex align-items-center flex-wrap pagination">
+          <ng-container *ngIf="page > 1">
+            <a class="arrow" (click)="updateCharacters({ page: page - 1 })">
+              <fa-icon [icon]="faChevronLeft"></fa-icon>
+            </a>
+            <a class="page" (click)="updateCharacters({ page: page - 1 })">
+              {{ page - 1 }}
+            </a>
+          </ng-container>
+
+          <a class="page">
+            {{ page }}
+          </a>
+
+          <ng-container *ngIf="page < total / 24">
+            <a class="page" (click)="updateCharacters({ page: page + 1 })">
+              {{ page + 1 }}
+            </a>
+            <a class="arrow" (click)="updateCharacters({ page: page + 1 })">
+              <fa-icon [icon]="faChevronRight"></fa-icon>
+            </a>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

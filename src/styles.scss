@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  /* Colors: */
+  --unnamed-color-ffffff: #ffffff;
+  --unnamed-color-f7f7f7: #f7f7f7;
+  --unnamed-color-fdfdf7: #fdfdf7;
+  --unnamed-color-dbdbdb: #dbdbdb;
+  --unnamed-color-808994: #808994;
+  --unnamed-color-393b44: #393b44;
+  --unnamed-color-0090ef: #0090ef;
+  --unnamed-color-ff3442: #ff3442;
+
+  /* Font/text values */
+  --unnamed-font-family-poppins: Poppins;
+  --unnamed-font-style-normal: normal;
+  --unnamed-font-weight-600: 600px;
+  --unnamed-font-size-13: 13px;
+  --unnamed-character-spacing-0: 0px;
+  --unnamed-line-spacing-17: 17px;
+}
+
+body {
+  background: var(--unnamed-color-f7f7f7) 0% 0% no-repeat padding-box;
+  opacity: 1;
+}

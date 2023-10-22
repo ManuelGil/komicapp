@@ -1,0 +1,30 @@
+<div class="row col-12 hero">
+  <ng-container *ngIf="(characters$ | async)?.results as characters">
+    <div class="col-sm-12 col-md-8 card p-0 cover">
+      <img
+        class="img-fluid"
+        src="{{ characters[0].thumbnail?.path }}.{{
+          characters[0].thumbnail?.extension
+        }}"
+      />
+    </div>
+    <div class="col-11 col-md-6 col-lg-5 card description">
+      <div class="shared"></div>
+      <div class="favorite"></div>
+      <p class="card-title">
+        {{ characters[0].name }}
+      </p>
+      <p class="card-details">
+        Updated {{ characters[0].modified | date: 'MMMM yyyy' }}
+      </p>
+      <p class="card-text">
+        {{ characters[0].description }}
+      </p>
+    </div>
+  </ng-container>
+</div>
+<div class="container">
+  <div class="row col-12">
+    <div class="col-sm-6 col-lg-3 col-xxl-2 d-none d-sm-block my-4 total"></div>
+  </div>
+</div>

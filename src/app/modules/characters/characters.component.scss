@@ -1,0 +1,50 @@
+.navbar {
+  height: 65px;
+}
+
+.logo {
+  border: 1px solid #00000000;
+  height: 31px;
+  opacity: 1;
+  width: 233px;
+  position: absolute;
+  bottom: 0;
+}
+
+.input-icons {
+  height: 58px;
+  position: relative;
+}
+
+.icon {
+  height: 17px;
+  padding-left: 30px;
+  position: absolute;
+  top: 50%;
+  width: 17px;
+}
+
+.search {
+  background: var(--unnamed-color-f7f7f7) 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  border: none;
+  box-shadow: 0px 3px 10px #81818129;
+  color: var(--unnamed-color-808994);
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    16px/21px var(--unnamed-font-family-poppins);
+  height: 48px;
+  letter-spacing: var(--unnamed-character-spacing-0);
+  opacity: 1;
+  padding-left: 60px;
+  padding-right: 30px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: calc(85%);
+  }
+}
