@@ -73,4 +73,23 @@ export class CharactersHttpService {
 
     return this.http.get(`${API_CHARACTERS_URL}/${id}`, { params });
   }
+
+  getComicsById(id: number): Observable<ResponseModel> {
+    const ts = Date.now();
+
+    const md5 = new Md5();
+    const hash = String(
+      md5.appendStr(`${ts}${PRIVATE_KEY}${PUBLIC_KEY}`).end(),
+    );
+
+    const fromObject = {
+      ts,
+      apikey: PUBLIC_KEY,
+      hash,
+    };
+
+    const params = new HttpParams({ fromObject });
+
+    return this.http.get(`${API_CHARACTERS_URL}/${id}/comics`, { params });
+  }
 }

@@ -1,4 +1,4 @@
-# Technical Test
+# KOMICAPP
 
 ![demo](./docs/images/demo.gif)
 
